@@ -14,7 +14,7 @@
   --bg-primary: hsl(var(--hue), 22%, 20%); /* bg = Background color */
   --fc-primary: hsl(var(--hue), 0%, 100%); /* fc = Font color */
   --fc-secondary: hsl(var(--hue), 50%, 80%);
-  --fc-secondary-dark: hsla(250, 100%, 11%, 1);
+  --fc-secondary-dark: hsl(var(--hue), 100%, 11%);
   --fs-body: 1.6rem; /* fs = Font size */
   --fs-heading: 4rem;
 
@@ -40,11 +40,18 @@ main {
   gap: 3.2rem;
 }
 
-img {
+.card img {
   width: 100%;
   height: auto;
 
   border-radius: 8px;
+
+  transition: all 400ms;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  opacity: 0.6;
 }
 
 header {
@@ -100,7 +107,7 @@ header h1 {
   line-height: 32px;
   font-size: var(--fs-body);
   color: var(--fc-secondary-dark);
-  background-color: var(--fc-primary);
+  background-color: #cf8fe6e5;
 
   border-radius: 2rem;
 
