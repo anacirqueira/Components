@@ -118,3 +118,36 @@ header h1 {
   align-items: center;
   width: fit-content;
 }
+
+header {
+  animation-name: topdown;
+  animation-duration: 2s;
+}
+
+main {
+  animation: downtop 800ms 400ms backwards;
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
